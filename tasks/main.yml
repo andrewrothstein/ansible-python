@@ -1,0 +1,56 @@
+---
+- name: (Ubuntu) python packages...
+  when: ansible_distribution == "Ubuntu"
+  environment: proxy_env
+  apt: name={{ item }}
+  with_items:
+    - python
+    - python-dev
+    - python-pip
+    - python-numpy
+    - python-scipy
+    - python-matplotlib
+    - ipython
+    - ipython-notebook
+    - python-pandas
+    - python-sympy
+    - python-nose
+
+- name: (Fedora) python packages...
+  when: ansible_distribution == "Fedora"
+  environment: proxy_env
+  yum: name={{item}}
+  with_items:
+    - python
+    - python-devel
+    - python-pip
+    - numpy
+    - scipy
+    - python-matplotlib
+    - ipython
+    - python-pandas
+    - sympy
+    - python-nose
+
+- name: pip my ride....
+  environment: proxy_env
+  pip: state=latest name={{item}}
+  with_items:
+    - virtualenv
+    - ansible
+    - awscli
+    - s3cmd
+    - boto
+    - scikit-learn
+    - wheel
+    - twine
+    - fig
+    - j2cli
+
+- name: pants virtualenv
+  environment: proxy_env
+  pip: state=latest name=pantsbuild.pants virtualenv=/python-venvs/pants
+
+- name: pip docker-py
+  environment: proxy_env
+  pip: state=present name=docker-py
