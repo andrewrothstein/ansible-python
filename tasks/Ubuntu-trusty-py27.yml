@@ -1,3 +1,9 @@
 ---
 - name: add deadsnake ppa
-  apt_repository: repo='ppa:fkrull/deadsnakes-python2.7' state=present update_cache=yes
+  apt_repository: repo='ppa:fkrull/deadsnakes-python2.7'
+  register: deadsnake_ppa_added
+
+- name: update cache...
+  apt: update_cache=yes
+  when: deadsnake_ppa_added|changed
+  
