@@ -8,9 +8,6 @@
   when: deadsnake_ppa_added|changed
 
 - name: (Ubuntu) python packages...
-  apt: name={{ item }} state=latest
-  with_items:
-    - python
-    - python-dev
-    - python-pip
+  shell: apt-get upgrade -y python
+  when: deadsnake_ppa_added|changed
 
