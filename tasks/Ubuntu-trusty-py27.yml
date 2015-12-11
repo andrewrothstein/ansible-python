@@ -1,7 +1,3 @@
 ---
 - name: add deadsnake ppa
   apt_repository: repo='ppa:fkrull/deadsnakes-python2.7' update_cache=yes
-
-- name: upgrade python...
-  apt: name=python state=latest
-  
