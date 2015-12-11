@@ -1,4 +1,4 @@
 ---
 - hosts: localhost
   roles:
-    - andrewrothstein.python
+    - { role: 'andrewrothstein.python', python_ubuntu_trusty_py27 : True }
