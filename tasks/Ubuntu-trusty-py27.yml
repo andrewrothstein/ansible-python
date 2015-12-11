@@ -4,7 +4,7 @@
   register: deadsnake_ppa_added
 
 - name: (Ubuntu) update cache...
-  apt: update_cache=yes
+  shell: apt-get update -y
   when: deadsnake_ppa_added|changed
 
 - name: (Ubuntu) python packages...
