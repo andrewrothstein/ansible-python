@@ -1,8 +1,14 @@
 ---
-- name: (Debian) python packages...
-  apt: name={{ item }}
-  with_items:
-    - python
-    - python-dev
-    - python-pip
 
+- name: (Debian) package based install...
+  include: Debian-pkg.yml
+
+- name: (Ubuntu) latest python 2.7...
+  when: >
+    ansible_distribution == "Ubuntu"
+    and ansible_distribution_release == "trusty"
+    and python_ubuntu_trusty_py27
+  include: Ubuntu-trusty-py27.yml
+  
+    
+  

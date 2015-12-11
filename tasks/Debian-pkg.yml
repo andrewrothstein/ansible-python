@@ -1,0 +1,7 @@
+---
+- name: (Debian) python packages...
+  apt: name={{ item }} state=latest
+  with_items:
+    - python
+    - python-dev
+    - python-pip
