@@ -1,0 +1,7 @@
+---
+- name: (EL) python packages...
+  yum: name={{item}}
+  with_items:
+    - python
+    - python-devel
+    - python-pip
