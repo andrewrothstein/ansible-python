@@ -1,6 +1,6 @@
 ---
 - name: (EL) python packages...
-  yum: name={{item}}
+  package: name={{item}}
   with_items:
     - python
     - python-devel
