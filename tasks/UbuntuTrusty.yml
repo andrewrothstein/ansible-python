@@ -4,7 +4,7 @@
   with_items:
     - python
     - python-dev
-    - python-pip
+    - python-virtualenv
 
 - name: (Ubuntu) add deadsnake ppa
   apt_repository: repo='ppa:fkrull/deadsnakes-python2.7'
@@ -16,5 +16,5 @@
 
 - name: (Ubuntu) upgrading python packages...
   when: deadsnake_ppa_added|changed
-  command: apt-get upgrade -y python python-dev python-pip
+  command: apt-get upgrade -y python python-dev python-virtualenv
 

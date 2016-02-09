@@ -11,8 +11,13 @@
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty'
   include: UbuntuTrusty.yml
 
-- name: upgrading pip
-  pip: state=latest name={{item}}
-  with_items:
-    - pip
-    - virtualenv
+- name: download get-pip.py
+  get_url: >
+    url=https://bootstrap.pypa.io/get-pip.py
+    dest=/tmp/get-pip.py
+    owner=root
+    group=root
+    mode=0755
+
+- name: install pip
+  command: python /tmp/get-pip.py

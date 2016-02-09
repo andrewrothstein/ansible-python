@@ -4,4 +4,4 @@
   with_items:
     - python
     - python-dev
-    - python-pip
+    - python-virtualenv
