@@ -1,1 +1,4 @@
 ---
+isUbuntu : {{ ansible_os_distribution == 'Ubuntu' }}
+isDebian : {{ ansible_os_family == 'Debian' }}
+isEL : {{ ansible_os_family == 'RedHat' }}

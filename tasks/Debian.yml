@@ -1,16 +1,7 @@
 ---
-- name: (Ubuntu) latest python 2.7...
-  include: Ubuntu-trusty-py27.yml
-  when: >
-    ansible_distribution == "Ubuntu"
-    and ansible_distribution_release == "trusty"
-    and python_ubuntu_trusty_py27 == True
-
-- name: (Debian) package based install...
-  include: Debian-pkg.yml
-  when: >-
-    ansible_distribution != "Ubuntu"
-    or ansible_distribution_release != "trusty"
-    or python_ubuntu_trusty_py27 == False
-
-  
+- name: (Debian) python packages...
+  package: name={{ item }} state=present
+  with_items:
+    - python
+    - python-dev
+    - python-pip

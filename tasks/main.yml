@@ -1,10 +1,14 @@
 ---
 - name: Debian install..
-  when: ansible_os_family == 'Debian'
+  when: isDebian and not isUbuntuTrusty
   include: Debian.yml
+
+- name: Ubuntu install...
+  when: isUbuntuTrusty
+  include: UbuntuTrusty.yml
   
 - name: EL install...
-  when: ansible_os_family == 'RedHat'
+  when: isEL
   include: EL.yml
 
 - name: upgrading pip
