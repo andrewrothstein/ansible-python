@@ -14,7 +14,7 @@
   when: deadsnake_ppa_added|changed
   apt: update_cache=yes
 
-- name: (Ubuntu) python packages...
+- name: (Ubuntu) upgrading python packages...
   when: deadsnake_ppa_added|changed
   command: apt-get upgrade -y python python-dev python-pip
 

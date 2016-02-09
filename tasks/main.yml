@@ -1,4 +1,8 @@
 ---
+- name: EL install...
+  when: ansible_os_family == 'RedHat'
+  include: EL.yml
+
 - name: Debian install..
   when: ansible_os_family == 'Debian' and ansible_distribution != 'Ubuntu'
   include: Debian.yml
@@ -6,10 +10,6 @@
 - name: Ubuntu install...
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'trusty'
   include: UbuntuTrusty.yml
-  
-- name: EL install...
-  when: ansible_os_family == 'RedHat'
-  include: EL.yml
 
 - name: upgrading pip
   pip: state=latest name={{item}}
