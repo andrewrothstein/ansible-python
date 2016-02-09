@@ -8,6 +8,10 @@
   include: Ubuntu-trusty-py27.yml
   
 - name: (Debian) package based install...
+  when: >
+    ansible_distribution != "Ubuntu"
+    or ansible_distribution_release != "trusty"
+    or not python_ubuntu_trusty_py27
   include: Debian-pkg.yml
 
     
