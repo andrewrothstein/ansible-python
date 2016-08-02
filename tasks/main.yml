@@ -1,19 +1,13 @@
 ---
-- name: EL install...
-  when: ansible_os_family == 'RedHat'
-  include: EL.yml
+- name: resolve platform specific vars
+  include_vars: "{{item}}"
+  with_first_found:
+    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+    - "{{ansible_distribution}}.yml"
+    - "{{ansible_os_family}}.yml"
 
-- name: Debian install..
-  when: ansible_os_family == 'Debian'
-  include: Debian.yml
-
-- name: download get-pip.py
-  get_url: >
-    url=https://bootstrap.pypa.io/get-pip.py
-    dest=/tmp/get-pip.py
-    owner=root
-    group=root
-    mode=0755
-
-- name: install pip
-  command: python /tmp/get-pip.py
+- name: install python os pkgs
+  become: yes
+  become_user: root
+  with_items: '{{python_pkgs}}'
+  package: name={{item}} state=present

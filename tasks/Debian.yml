@@ -1,7 +1,0 @@
----
-- name: (Debian) python packages...
-  package: name={{ item }} state=present
-  with_items:
-    - python
-    - python-dev
-    - python-virtualenv

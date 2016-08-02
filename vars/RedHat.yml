@@ -1,0 +1,8 @@
+---
+python_pkgs:
+  - python
+  - python-devel
+  - python-virtualenv
+  - python-pip
+  - python-wheel  
+  

@@ -1,0 +1,8 @@
+---
+python_pkgs:
+  - python
+  - python-dev
+  - python-virtualenv
+  - python-pip
+
+  
