@@ -6,8 +6,10 @@
     - "{{ansible_distribution}}.yml"
     - "{{ansible_os_family}}.yml"
 
-- name: install python os pkgs
+- name: installing python os pkgs...
   become: yes
   become_user: root
   with_items: '{{python_pkgs}}'
-  package: name={{item}} state=present
+  package:
+    name: '{{item}}'
+    state: present
