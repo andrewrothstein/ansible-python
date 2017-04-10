@@ -1,6 +1,6 @@
 ---
 python_pkgs:
-  - python
+  - '{% if ansible_distribution_version >= "3.5" %}python2{% else %}python{% endif %}'
   - py-virtualenv
   - '{% if ansible_distribution_version >= "3.5" %}python2-dev{% else %}python-dev{% endif %}'
   - '{% if ansible_distribution_version >= "3.5" %}py2-pip{% else %}py-pip{% endif %}'
