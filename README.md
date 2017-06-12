@@ -1,8 +1,8 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-python.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-python)
 andrewrothstein.python
 ===========================
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-python.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-python)
 
-A role for installing a [Python](https://www.python.org/) development environment from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://pypi.python.org/pypi/virtualenv).
+A role for installing a [Python 2](https://www.python.org/) development environment from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://pypi.python.org/pypi/virtualenv).
 
 Requirements
 ------------
