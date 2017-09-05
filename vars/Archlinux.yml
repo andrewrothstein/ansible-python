@@ -1,0 +1,5 @@
+---
+python_pkgs:
+  - python2
+  - python2-virtualenv
+  - python2-pip
