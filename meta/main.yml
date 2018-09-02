@@ -32,4 +32,4 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.epel
-    version: v1.0.5
+    version: v1.0.6
