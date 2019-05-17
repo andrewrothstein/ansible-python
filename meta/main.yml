@@ -1,35 +1,33 @@
----
+dependencies:
+- role: andrewrothstein.epel
+  version: v1.0.8
 galaxy_info:
   author: Andrew Rothstein
-  description: python role
   company: BlackRock
+  description: python role
+  galaxy_tags:
+  - development
+  - python
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - jessie
-        - stretch
-    - name: Archlinux
-      versions:
-        - all
-  galaxy_tags:
-    - development
-    - python
-
-dependencies:
-  - role: andrewrothstein.epel
-    version: v1.0.6
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Alpine
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
+  - name: Archlinux
+    versions:
+    - all
