@@ -13,7 +13,6 @@
 - name: installing python os pkgs...
   become: yes
   become_user: root
-  with_items: '{{ python_pkgs }}'
   package:
-    name: '{{ item }}'
+    name: '{{ python_pkgs }}'
     state: present
