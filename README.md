@@ -2,7 +2,7 @@ andrewrothstein.python
 ===========================
 ![Build Status](https://github.com/andrewrothstein/ansible-python/actions/workflows/build.yml/badge.svg)
 
-Installs [Python](https://www.python.org/) from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [virtualenv](https://pypi.python.org/pypi/virtualenv).
+Installs [Python](https://www.python.org/) from operating system packages including [pip](https://pypi.python.org/pypi/pip) and [wheel](https://pypi.python.org/pypi/wheel).
 
 Requirements
 ------------
