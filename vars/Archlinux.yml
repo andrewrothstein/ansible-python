@@ -1,5 +1,6 @@
 ---
 python_pkgs:
-  - python2
-  - python2-virtualenv
-  - python2-pip
+  - python
+  - python-virtualenv
+  - python-pip
+  - python-wheel

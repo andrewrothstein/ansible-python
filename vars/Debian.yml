@@ -4,3 +4,4 @@ python_pkgs:
   - python-dev
   - python-virtualenv
   - python-pip
+  - python-wheel

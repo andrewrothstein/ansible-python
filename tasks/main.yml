@@ -11,7 +11,7 @@
         - '{{ role_path }}/vars'
 
 - name: installing python os pkgs...
-  become: yes
+  become: true
   become_user: root
   package:
     name: '{{ python_pkgs }}'
