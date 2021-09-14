@@ -2,3 +2,9 @@
 - hosts: all
   roles:
     - role: '{{ playbook_dir }}'
+  tasks:
+    - command: python3 --version
+      register: python_test_output
+    - name: python3 --version
+      debug:
+        msg: '{{ python_test_output.stdout }}'
