@@ -1,6 +1,6 @@
 ---
 python_pkgs:
-  - python
-  - python-devel
-  - python-pip
-  - python-wheel
+  - python39
+  - python39-devel
+  - python39-pip
+  - python39-wheel
