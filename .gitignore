@@ -1,4 +1,5 @@
-**~
+**~*.retry
 Dockerfile.*
-*.retry
 requirements.yml
+!meta/requirements.yml
+**/*undo-tree*

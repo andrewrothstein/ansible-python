@@ -1,32 +1,34 @@
-dependencies: []
+---
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock
   description: python role
   galaxy_tags:
-  - development
-  - python
+    - development
+    - python
   license:
-  - MIT
+    - MIT
   min_ansible_version: 2.0
   platforms:
-  - name: Alpine
-    versions:
-    - all
-  - name: Archlinux
-    versions:
-    - all
-  - name: Debian
-    versions:
-    - bullseye
-    - buster
-  - name: EL
-    versions:
-    - 8
-  - name: Fedora
-    versions:
-    - 34
-  - name: Ubuntu
-    versions:
-    - bionic
-    - focal
+    - name: Alpine
+      versions:
+        - all
+    - name: Archlinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+    - name: EL
+      versions:
+        - 8
+        - 9
+    - name: Fedora
+      versions:
+        - 36
+        - 37
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
