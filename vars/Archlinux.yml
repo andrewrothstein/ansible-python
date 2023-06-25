@@ -3,3 +3,4 @@ python_pkgs:
   - python
   - python-pip
   - python-wheel
+  - python-virtualenv
