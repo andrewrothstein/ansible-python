@@ -25,15 +25,19 @@
   },
   {
     "OS": "fedora",
-    "OS_VER": "37"
+    "OS_VER": "38"
   },
   {
     "OS": "fedora",
-    "OS_VER": "38"
+    "OS_VER": "39"
   },
   {
     "OS": "rockylinux",
     "OS_VER": "8"
+  },
+  {
+    "OS": "rockylinux",
+    "OS_VER": "9"
   },
   {
     "OS": "ubuntu",
