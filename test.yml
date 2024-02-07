@@ -1,10 +1,13 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.python
+  hosts: all
   roles:
     - role: '{{ playbook_dir }}'
   tasks:
-    - command: python3 --version
+    - name: Executing 'python3 --version'
+      ansible.builtin.command: python3 --version
+      changed_when: false
       register: python_test_output
-    - name: python3 --version
-      debug:
+    - name: Output from 'python3 --version'
+      ansible.builtin.debug:
         msg: '{{ python_test_output.stdout }}'

@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -10,9 +10,9 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: installing python os pkgs...
+- name: Installing python os pkgs...
   become: true
   become_user: root
-  package:
+  ansible.builtin.package:
     name: '{{ python_pkgs }}'
     state: present

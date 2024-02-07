@@ -1,8 +1,8 @@
 ---
 python_pkgs_all_ver:
-    - python3
-    - python3-devel
-    - python3-pip
+  - python3
+  - python3-devel
+  - python3-pip
 
 python_pkgs_by_ver:
   8:
